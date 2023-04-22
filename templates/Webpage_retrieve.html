@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+
+
+        <label for="a">Topic_name</label>
+        <select id="a" name="a" multiple>
+        {% for i in R %}
+        <option value="{{i}}">{{i.Topic_name}}</option>
+        {% endfor %}
+        </select>
+        <br>
+        <br>
+        <label for="b">Name</label>
+        <input type="text" name="b" id="b">
+        <br>
+        <br>
+        <label for="c">Url</label>
+        <input type="url" name="c" id="c">
+        <br>
+        <br>
+        <label for="d">Email</label>
+        <input type="email" name="d" id="d">
+        <br>
+        <br>
+        <input type="submit" value="Submitted">
+    </form>
+</body>
+</html>

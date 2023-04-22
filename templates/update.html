@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="a">Topic_name</label>
+        {% for i in DD %}
+        <input type="text" name="a" id="a">
+        <br>
+        <br>
+        <input type="submit" value="Click">
+    </form>
+</body>
+</html>

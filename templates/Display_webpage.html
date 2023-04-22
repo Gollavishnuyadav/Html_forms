@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <table border="2px">
+        <th>Topic_name</th>
+        <th>Name</th>
+        <th>Url</th>
+        <th>Email</th>
+        {% for j in dd %}
+        <tr>
+            <td>{{j.Topic_name}}</td>
+            <td>{{j.Name}}</td>
+            <td>{{j.Url}}</td>
+            <td>{{j.Email}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

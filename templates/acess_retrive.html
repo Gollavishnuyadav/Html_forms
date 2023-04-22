@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="a">Name</label>
+
+
+        <select id="a" name="a" multiple>
+            {% for i in ARR %}
+            <option value="{{i}}">{{i.Name}}</option>
+            {% endfor %}
+        </select>
+
+
+
+
+
+
+
+
+        
+        <br>
+        <br>
+        <label for="b">Author</label>
+        <input type="text" id="b" name="b">
+        <br>
+        <br>
+        <label for="c">Date</label>
+        <input type="date" id="c" name="c">
+        <br>
+        <br>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" action="{% url 'Webpage_retrieve' %}">
+        {% csrf_token %}
+        {% for i in c %}
+        <label for="a">{{i.Topic_name}}</label>
+        <input type="radio" name="a" id="a" value="{{i}}">
+        <br>
+        <br>
+        {% endfor %}
+
+        <input type="submit" value="SS">
+    </form>
+</body>
+</html>
